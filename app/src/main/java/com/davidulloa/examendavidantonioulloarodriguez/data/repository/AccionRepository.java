@@ -9,7 +9,9 @@ import com.davidulloa.examendavidantonioulloarodriguez.data.local.models.Accion;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
+@Singleton
 public class AccionRepository {
     private AccionDao accionesDao;
     private AppExecutors appExecutors;

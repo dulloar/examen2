@@ -7,7 +7,9 @@ import androidx.room.Room;
 import com.davidulloa.examendavidantonioulloarodriguez.Constants;
 import com.davidulloa.examendavidantonioulloarodriguez.api.AuthService;
 import com.davidulloa.examendavidantonioulloarodriguez.data.local.MarcasRoomDatabase;
+import com.davidulloa.examendavidantonioulloarodriguez.data.local.dao.AccionDao;
 import com.davidulloa.examendavidantonioulloarodriguez.data.local.dao.MarcaDao;
+import com.davidulloa.examendavidantonioulloarodriguez.data.local.dao.RecargaDao;
 import com.davidulloa.examendavidantonioulloarodriguez.data.remote.AuthInterceptor;
 import com.davidulloa.examendavidantonioulloarodriguez.util.LiveDataCallAdapterFactory;
 import com.google.gson.Gson;
@@ -52,6 +54,14 @@ public class AppModule {
 
     @Singleton
     @Provides
-    MarcaDao providesEntronquesDao(MarcasRoomDatabase db){ return db.MarcaDao(); }
+    MarcaDao providesMarcaDao(MarcasRoomDatabase db){ return db.MarcaDao(); }
+
+    @Singleton
+    @Provides
+    RecargaDao providesRecargaDao(MarcasRoomDatabase db){ return db.recargaDao(); }
+
+    @Singleton
+    @Provides
+    AccionDao providesAccionDao(MarcasRoomDatabase db){ return db.accionDao(); }
 
 }

@@ -9,7 +9,9 @@ import com.davidulloa.examendavidantonioulloarodriguez.data.remote.models.Usuari
 import com.davidulloa.examendavidantonioulloarodriguez.data.remote.response.ResponseAuth;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
+@Singleton
 public class UsuarioRepository {
     private AuthService authService;
     private AppExecutors appExecutors;

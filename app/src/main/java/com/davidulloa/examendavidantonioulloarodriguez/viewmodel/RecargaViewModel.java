@@ -16,6 +16,6 @@ public class RecargaViewModel extends ViewModel {
     }
 
     public void GuardarRecarga(Recarga recarga){
-
+        this.repository.saveRecarga(recarga);
     }
 }
