@@ -1,10 +1,20 @@
 package com.davidulloa.examendavidantonioulloarodriguez.app;
 
+import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 
-public class App extends Application {
+import javax.inject.Inject;
+
+import dagger.android.AndroidInjector;
+import dagger.android.DispatchingAndroidInjector;
+import dagger.android.HasActivityInjector;
+
+public class App extends Application implements HasActivityInjector {
     private static  App instance;
+
+    @Inject
+    DispatchingAndroidInjector<Activity> dispatchingAndroidInjector;
     public static App getIntance() {
         return instance;
     }
@@ -17,5 +27,10 @@ public class App extends Application {
     public void onCreate() {
         instance = this;
         super.onCreate();
+    }
+
+    @Override
+    public AndroidInjector<Activity> activityInjector() {
+        return dispatchingAndroidInjector;
     }
 }

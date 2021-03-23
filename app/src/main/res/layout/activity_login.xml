@@ -28,9 +28,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
             android:ems="10"
+            android:drawableLeft="@drawable/ic_agente"
             android:hint="Correo o nombre de usuario"
             android:inputType="textEmailAddress"
-            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/white"
+            android:textColor="@android:color/white"
             android:textColorLink="@android:color/white"
             app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
@@ -40,6 +42,7 @@
 
         <EditText
             android:id="@+id/editTextPassword"
+            android:drawableLeft="@drawable/ic_pass"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -47,6 +50,8 @@
             android:hint="Contraseña"
             android:inputType="textPassword"
             android:textColorLink="@android:color/white"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
             app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
             app:layout_constraintEnd_toEndOf="@+id/editTextEmail"
             app:layout_constraintHorizontal_bias="0.5"
@@ -65,7 +70,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/editTextPassword"
             app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
-            android:background="@color/colorPrimary"/>
+            android:background="@color/colorAzul"/>
 
         <TextView
             android:id="@+id/textViewGoSignUp"
